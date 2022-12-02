@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-02T18:26:02.588Z</updated>
+  <updated>2022-12-02T19:02:59.773Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testblog</title>
+    <link href="http://example.com/2022/12/03/testblog/"/>
+    <id>http://example.com/2022/12/03/testblog/</id>
+    <published>2022-12-02T19:00:13.000Z</published>
+    <updated>2022-12-02T19:02:59.773Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="大数据基础"><a href="#大数据基础" class="headerlink" title="大数据基础"></a>大数据基础</h2><h3 id="flume"><a href="#flume" class="headerlink" title="flume"></a>flume</h3><h3 id="kafka"><a href="#kafka" class="headerlink" title="kafka"></a>kafka</h3><h3 id="hadoop"><a href="#hadoop" class="headerlink" title="hadoop"></a>hadoop</h3><h3 id="hbase"><a href="#hbase" class="headerlink" title="hbase"></a>hbase</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;大数据基础&quot;&gt;&lt;a href=&quot;#大数据基础&quot; class=&quot;headerlink&quot; title=&quot;大数据基础&quot;&gt;&lt;/a&gt;大数据基础&lt;/h2&gt;&lt;h3 id=&quot;flume&quot;&gt;&lt;a href=&quot;#flume&quot; class=&quot;headerlink&quot; title=&quot;flu</summary>
+      
+    
+    
+    
+    
+    <category term="随记" scheme="http://example.com/tags/%E9%9A%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
