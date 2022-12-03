@@ -76,7 +76,8 @@
       
       
         <h3 id="什么是负载均衡"><a href="#什么是负载均衡" class="headerlink" title="什么是负载均衡"></a>什么是负载均衡</h3><p>负载均衡就是一种机制，一个算法，用于解决分担一个机器无法完成而分到等多个机器上一起解决的问题。</p>
-<h3 id="flume和负载均衡的产生背景"><a href="#flume和负载均衡的产生背景" class="headerlink" title="flume和负载均衡的产生背景"></a>flume和负载均衡的产生背景</h3><p>从数据源到中间多台flume再到数据存储的过程中，当两个以上flume串联的使用时，会因为两个flume机器能力不一样而产生问题。比如一个机器每秒处理100个event而一个机器每秒处理10个event，这两配合一起工作时间长了，会形成数据堵塞的问题。</p>
+<h3 id="flume和负载均衡的产生背景"><a href="#flume和负载均衡的产生背景" class="headerlink" title="flume和负载均衡的产生背景"></a>flume和负载均衡的产生背景</h3><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-04-01-23-16-image.png"></p>
+<p>从数据源到中间多台flume再到数据存储的过程中，当两个以上flume串联的使用时，会因为两个flume机器能力不一样而产生问题。比如一个机器每秒处理100个event而一个机器每秒处理10个event，这两配合一起工作时间长了，会形成数据堵塞的问题。</p>
 <p>一个agent解决不了的问题，可以多个agent解决问题，这就是flume中遇到的负载均衡的产生背景；</p>
 <h3 id="flume负载均衡算法"><a href="#flume负载均衡算法" class="headerlink" title="flume负载均衡算法"></a>flume负载均衡算法</h3>
       
