@@ -61,24 +61,24 @@
   </entry>
   
   <entry>
-    <title>testblog</title>
-    <link href="http://example.com/2022/12/03/testblog-1/"/>
-    <id>http://example.com/2022/12/03/testblog-1/</id>
+    <title>我们一起叠buff</title>
+    <link href="http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/"/>
+    <id>http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/</id>
     <published>2022-12-02T19:11:43.000Z</published>
-    <updated>2022-12-02T19:13:16.763Z</updated>
+    <updated>2022-12-09T05:46:19.184Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="hello-again"><a href="#hello-again" class="headerlink" title="hello again"></a>hello again</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="我们是谁？"><a href="#我们是谁？" class="headerlink" title="我们是谁？"></a>我们是谁？</h2><p>我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，而我要做的是 大数据开发、大数据平台开发；</p><h2 id="为什么说是叠buff"><a href="#为什么说是叠buff" class="headerlink" title="为什么说是叠buff"></a>为什么说是叠buff</h2><p>因为今天突发奇想，觉得人生道路上，如果把工作当成是叠buff，那人生就有趣多了。其实真正有趣的不是完成的过程，是完成后达到的标准是什么，我们的人生就像是打游戏一样，过关、斩将，一关一关的过。就如同现在我们的人生一样，过关斩将也是常有的事情。</p><h4 id="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"><a href="#最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗" class="headerlink" title="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"></a>最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗</h4>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;hello-again&quot;&gt;&lt;a href=&quot;#hello-again&quot; class=&quot;headerlink&quot; title=&quot;hello again&quot;&gt;&lt;/a&gt;hello again&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;我们是谁？&quot;&gt;&lt;a href=&quot;#我们是谁？&quot; class=&quot;headerlink&quot; title=&quot;我们是谁？&quot;&gt;&lt;/a&gt;我们是谁？&lt;/h2&gt;&lt;p&gt;我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，</summary>
       
     
     
     
     
-    <category term="随记" scheme="http://example.com/tags/%E9%9A%8F%E8%AE%B0/"/>
+    <category term="buff" scheme="http://example.com/tags/buff/"/>
     
   </entry>
   
