@@ -17,18 +17,24 @@
 <link rel="stylesheet" href="/css/highlight.css">
 
   
-  <meta name="description" content="flink本地部署单节点1$">
+  <meta name="description" content="flink本地部署单节点1$    flink特点 处理有界数据和无界数据  低延迟  高吞吐  结果的准确性和良好的容错性   使用flink行业 电商和市场营销 数据报表、广告投放、业务流程需要；  物联网 传感器实时数据采集和显示、实时报警、交通运输业；  电信业 基站流量调配；  银行和金融业 实时结算和通知推送，实时检测异常行为；   传统数据处理架构 有状态的流式处理 流处理的演变 l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flink">
 <meta property="og:url" content="http://example.com/2022/12/10/flink/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="flink本地部署单节点1$">
+<meta property="og:description" content="flink本地部署单节点1$    flink特点 处理有界数据和无界数据  低延迟  高吞吐  结果的准确性和良好的容错性   使用flink行业 电商和市场营销 数据报表、广告投放、业务流程需要；  物联网 传感器实时数据采集和显示、实时报警、交通运输业；  电信业 基站流量调配；  银行和金融业 实时结算和通知推送，实时检测异常行为；   传统数据处理架构 有状态的流式处理 流处理的演变 l">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-28-37-image.png">
+<meta property="og:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-32-24-image.png">
+<meta property="og:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-44-37-image.png">
+<meta property="og:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-01-20-image.png">
+<meta property="og:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-06-30-image.png">
 <meta property="article:published_time" content="2022-12-10T09:47:00.000Z">
-<meta property="article:modified_time" content="2022-12-10T09:48:15.411Z">
+<meta property="article:modified_time" content="2022-12-11T14:21:11.791Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="flink">
-<meta name="twitter:card" content="summary"><meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-28-37-image.png"><meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="wrapper">
@@ -81,6 +87,95 @@
 
 
 
+<h2 id="flink特点"><a href="#flink特点" class="headerlink" title="flink特点"></a>flink特点</h2><ul>
+<li><p>处理有界数据和无界数据</p>
+</li>
+<li><p>低延迟</p>
+</li>
+<li><p>高吞吐</p>
+</li>
+<li><p>结果的准确性和良好的容错性</p>
+</li>
+</ul>
+<h2 id="使用flink行业"><a href="#使用flink行业" class="headerlink" title="使用flink行业"></a>使用flink行业</h2><ul>
+<li><p>电商和市场营销</p>
+<p>数据报表、广告投放、业务流程需要；</p>
+</li>
+<li><p>物联网</p>
+<p>传感器实时数据采集和显示、实时报警、交通运输业；</p>
+</li>
+<li><p>电信业</p>
+<p>基站流量调配；</p>
+</li>
+<li><p>银行和金融业</p>
+<p>实时结算和通知推送，实时检测异常行为；</p>
+</li>
+</ul>
+<h2 id="传统数据处理架构"><a href="#传统数据处理架构" class="headerlink" title="传统数据处理架构"></a>传统数据处理架构</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-28-37-image.png"></p>
+<h2 id="有状态的流式处理"><a href="#有状态的流式处理" class="headerlink" title="有状态的流式处理"></a>有状态的流式处理</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-32-24-image.png"></p>
+<h2 id="流处理的演变"><a href="#流处理的演变" class="headerlink" title="流处理的演变"></a>流处理的演变</h2><ul>
+<li><p>lambda演变（流批一体）</p>
+<ol>
+<li><p>用两套系统，同事保持低延迟和结果准确</p>
+</li>
+<li><p>保存着流处理和批处理的架构</p>
+</li>
+<li><p>先攒一批再处理</p>
+</li>
+<li><p>痛处：维护不同的系统时当架构发生变化，维护、开发成本变大，因为需要同时改变两套框架的处理方式，如：API用法；</p>
+</li>
+</ol>
+<p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-44-37-image.png"></p>
+</li>
+</ul>
+<h2 id="Flink的主要特点"><a href="#Flink的主要特点" class="headerlink" title="Flink的主要特点"></a>Flink的主要特点</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-01-20-image.png"></p>
+<h2 id="分层API"><a href="#分层API" class="headerlink" title="分层API"></a>分层API</h2><ul>
+<li><p>越顶层越抽象，表达含义越简明，使用越方便</p>
+</li>
+<li><p>越底层越具体，表达能力越丰富，使用越灵活</p>
+</li>
+</ul>
+<p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-06-30-image.png"></p>
+<h2 id="Flink其他特点"><a href="#Flink其他特点" class="headerlink" title="Flink其他特点"></a>Flink其他特点</h2><ul>
+<li><p>支持时间时间和处理时间语义；</p>
+</li>
+<li><p>精确一次的状态一致性保证；</p>
+</li>
+<li><p>低延迟，每秒处理数百万个事件，毫秒级延迟；</p>
+</li>
+<li><p>与众多常用存储系统的连接；</p>
+</li>
+<li><p>高可用，动态扩展，实现7*24小时全天候运行；</p>
+</li>
+</ul>
+<p>Flink vs Spark Stearming</p>
+<ul>
+<li><p>流和微批</p>
+<ul>
+<li><p>spark的微批把攒批的时间定的很小，达到秒级处理，但是结构还是批处理；</p>
+</li>
+<li><p>Flink就是流数据处理的架构过程；</p>
+</li>
+</ul>
+</li>
+<li><p>数据模型</p>
+<ul>
+<li><p>Spark采用RDD模型，spark streaming的DStrean实际上也就是一组组小批数据RDD的集合；</p>
+</li>
+<li><p>Flink基本数据模型是数据流，以及事件序列；</p>
+</li>
+</ul>
+</li>
+<li><p>运行时架构</p>
+<ul>
+<li><p>spark是批计算，将DAG划分为不同的stage，一个完成后才可以计算下一个；</p>
+</li>
+<li><p>flink是标砖的流执行模式，一个事件在一个节点处理完成后可以直接发往下一个节点进行处理；</p>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -101,7 +196,14 @@
   
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2022/12/11/flink-WordCount/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          flink-WordCount
+        
+      </div>
+    </a>
   
   
     <a href="/2022/12/04/Load-Balance/" id="article-nav-older" class="article-nav-link-wrap older">
