@@ -52,6 +52,131 @@
     <div id="content">
       
   
+    <article id="post-flink-Yarn" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2022/12/12/flink-Yarn/">flink-Yarn</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2022-12-12T15:43:53.000Z" itemprop="datePublished">December 12, 2022, 11:43 PM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h2 id="Flink-on-Yarn"><a href="#Flink-on-Yarn" class="headerlink" title="Flink on Yarn"></a>Flink on Yarn</h2><ul>
+<li>要求Flink是有Hadoop支持的版本，Hadoop环境需要2.2以上；</li>
+</ul>
+<h3 id="Session-cluster模式"><a href="#Session-cluster模式" class="headerlink" title="Session-cluster模式"></a>Session-cluster模式</h3><ul>
+<li><p>先启动集群，yarn会申请一块空间后，资源保持不变，如果资源满了，下一个作业酒无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，下一个作业才会正常提交；</p>
+</li>
+<li><p>所有作业共享Dispacher和ResourceManager：共享资源；</p>
+</li>
+<li><p>适合规模小执行时间短的作业；</p>
+</li>
+</ul>
+<h3 id="Per-Job-Cluster模式"><a href="#Per-Job-Cluster模式" class="headerlink" title="Per-Job-Cluster模式"></a>Per-Job-Cluster模式</h3><ul>
+<li><p>一个Job对应一个集群，没提交一个作业会根据自身情况都会单独向yarn申请资源，直到作业完成，一个作业的成功与否并不会影响到下一个作业的提交和运行；</p>
+</li>
+<li><p>独享Dispacher和ResourceManager，按需申请资源；</p>
+</li>
+<li><p>适合大规模长时间运行的作业；</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+  </div>
+</article>
+
+
+
+  
+    <article id="post-flink-standalone" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2022/12/12/flink-standalone/">flink-standalone</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2022-12-12T15:42:46.000Z" itemprop="datePublished">December 12, 2022, 11:42 PM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h2 id="StandAlone"><a href="#StandAlone" class="headerlink" title="StandAlone"></a>StandAlone</h2><p>单机模式，没有集群模式</p>
+
+      
+    </div>
+    
+    
+    
+  </div>
+</article>
+
+
+
+  
+    <article id="post-git" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2022/12/11/git/">如何本地代码上传github</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2022-12-11T15:58:24.000Z" itemprop="datePublished">December 11, 2022, 11:58 PM</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+    </div>
+    
+    
+    
+  </div>
+</article>
+
+
+
+  
     <article id="post-flink-WordCount" class="article article-type-post" itemprop="blogPost" itemscope>
   <div class="article-inner">
     
