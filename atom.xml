@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-12T16:04:01.079Z</updated>
+  <updated>2022-12-18T13:47:56.677Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,104 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>flink数据类型</title>
+    <link href="http://example.com/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://example.com/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2022-12-18T08:58:56.000Z</published>
+    <updated>2022-12-18T13:47:56.677Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="1-基础数据类型"><a href="#1-基础数据类型" class="headerlink" title="1. 基础数据类型"></a>1. 基础数据类型</h3><p>Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …；</p><h3 id="2-Java和Scala元组（Tuple）"><a href="#2-Java和Scala元组（Tuple）" class="headerlink" title="2. Java和Scala元组（Tuple）"></a>2. Java和Scala元组（Tuple）</h3><h3 id="3-Scala样例类（case-classes）"><a href="#3-Scala样例类（case-classes）" class="headerlink" title="3. Scala样例类（case classes）"></a>3. Scala样例类（case classes）</h3><h3 id="4-Java-简单对象-POJOs"><a href="#4-Java-简单对象-POJOs" class="headerlink" title="4. Java 简单对象(POJOs)"></a>4. Java 简单对象(POJOs)</h3><h3 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h3><p>Arrays, Lists, Maps, Enums, 等等；</p><h2 id="实现-UDF-函数——更细粒度的控制流"><a href="#实现-UDF-函数——更细粒度的控制流" class="headerlink" title="实现 UDF 函数——更细粒度的控制流"></a>实现 UDF 函数——更细粒度的控制流</h2><h3 id="1-函数类-Function-Classes"><a href="#1-函数类-Function-Classes" class="headerlink" title="1. 函数类(Function Classes)"></a>1. 函数类(Function Classes)</h3><h3 id="2-匿名函数-Lambda-Functions"><a href="#2-匿名函数-Lambda-Functions" class="headerlink" title="2. 匿名函数(Lambda Functions)"></a>2. 匿名函数(Lambda Functions)</h3><h3 id="3-富函数-Rich-Functions"><a href="#3-富函数-Rich-Functions" class="headerlink" title="3. 富函数(Rich Functions)"></a>3. 富函数(Rich Functions)</h3><p>富函数是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同就在于，可以获取运行环境的上下文，并拥有一些生命周期的方法，所以可以实现更复杂的功能；</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;1-基础数据类型&quot;&gt;&lt;a href=&quot;#1-基础数据类型&quot; class=&quot;headerlink&quot; title=&quot;1</summary>
+      
+    
+    
+    
+    
+    <category term="flink" scheme="http://example.com/tags/flink/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Transform</title>
+    <link href="http://example.com/2022/12/18/Transform/"/>
+    <id>http://example.com/2022/12/18/Transform/</id>
+    <published>2022-12-18T06:46:59.000Z</published>
+    <updated>2022-12-18T08:14:19.442Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p><p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p><p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Reduce&quot;&gt;&lt;a href=&quot;#Reduce&quot; class=&quot;headerlink&quot; title=&quot;Reduce&quot;&gt;&lt;/a&gt;Reduce&lt;/h3&gt;&lt;p&gt;一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。&lt;/p&gt;
+&lt;figure cla</summary>
+      
+    
+    
+    
+    
+    <category term="flink" scheme="http://example.com/tags/flink/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flink流处理API</title>
+    <link href="http://example.com/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/"/>
+    <id>http://example.com/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/</id>
+    <published>2022-12-14T13:14:09.000Z</published>
+    <updated>2022-12-14T14:48:32.684Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Flink流处理API流程"><a href="#Flink流处理API流程" class="headerlink" title="Flink流处理API流程"></a>Flink流处理API流程</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-14-21-14-39-image.png"></p><h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个执行环境，表示当前执行环境的上下文</span></span><br><span class="line"><span class="type">ExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> ExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line"></span><br><span class="line"><span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> StreamExecutionEnvironment.getExecutionEnvironment();</span><br></pre></td></tr></table></figure><h4 id="并行度设置"><a href="#并行度设置" class="headerlink" title="并行度设置"></a>并行度设置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//flink-conf.yaml中设置</span></span><br><span class="line"><span class="attr">parellesim.default:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure><h4 id="createLocalEnvironment"><a href="#createLocalEnvironment" class="headerlink" title="createLocalEnvironment"></a>createLocalEnvironment</h4><p>返回本地执行环境，需要在调用时指定默认的并行度。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">LocalStreamEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> StreamExecutionEnvironment.createLocalEnvironment(<span class="number">1</span>);</span><br></pre></td></tr></table></figure><h4 id="createRemoteEnvironment"><a href="#createRemoteEnvironment" class="headerlink" title="createRemoteEnvironment"></a>createRemoteEnvironment</h4><p>返回集群执行环境，将 Jar 提交到远程服务器。需要在调用时指定 JobManager 的 IP 和端口号，并指定要在集群中运行的 Jar 包。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span>StreamExecutionEnvironment.createRemoteEnvironment(</span><br><span class="line"><span class="string">&quot;jobmanage-hostname&quot;</span>, <span class="number">6123</span>,<span class="string">&quot;YOURPATH//WordCount.jar&quot;</span>);</span><br></pre></td></tr></table></figure><h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="从集合读取数据"><a href="#从集合读取数据" class="headerlink" title="从集合读取数据"></a>从集合读取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SourceTest1_Collection</span> &#123;<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception&#123;<span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span>StreamExecutionEnvironment.getExecutionEnvironment();<span class="comment">// 1.Source:从集合读取数据</span>DataStream&lt;SensorReading&gt; sensorDataStream = env.fromCollection(Arrays.asList(<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_1&quot;</span>, <span class="number">1547718199L</span>, <span class="number">35.8</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_6&quot;</span>, <span class="number">1547718201L</span>, <span class="number">15.4</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_7&quot;</span>, <span class="number">1547718202L</span>, <span class="number">6.7</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_10&quot;</span>, <span class="number">1547718205L</span>, <span class="number">38.1</span>)));<span class="comment">// 2.打印</span>sensorDataStream.print();<span class="comment">// 3.执行</span>env.execute();&#125;&#125;</span><br></pre></td></tr></table></figure><h3 id="从文件读取数据"><a href="#从文件读取数据" class="headerlink" title="从文件读取数据"></a>从文件读取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataStream&lt;String&gt; dataStream = env.readTextFile(<span class="string">&quot;YOUR_FILE_PATH &quot;</span>);</span><br></pre></td></tr></table></figure><h3 id="以-kafka-消息队列的数据作为来源"><a href="#以-kafka-消息队列的数据作为来源" class="headerlink" title="以 kafka 消息队列的数据作为来源"></a>以 kafka 消息队列的数据作为来源</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Flink流处理API流程&quot;&gt;&lt;a href=&quot;#Flink流处理API流程&quot; class=&quot;headerlink&quot; title=&quot;Flink流处理API流程&quot;&gt;&lt;/a&gt;Flink流处理API流程&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/Users/xiaomeich</summary>
+      
+    
+    
+    
+    
+    <category term="flink" scheme="http://example.com/tags/flink/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flink运行架构</title>
+    <link href="http://example.com/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/"/>
+    <id>http://example.com/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/</id>
+    <published>2022-12-12T16:20:43.000Z</published>
+    <updated>2022-12-13T12:41:34.407Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Flink运行时的组件"><a href="#Flink运行时的组件" class="headerlink" title="Flink运行时的组件"></a>Flink运行时的组件</h3><ol><li><p>作业管理器（JobManager）</p></li><li><p>任务管理器（TaskManager）</p></li><li><p>资源管理器（ResourceManager）</p></li><li><p>分发器（Dispatcher）</p></li></ol><h2 id="任务提交流程"><a href="#任务提交流程" class="headerlink" title="任务提交流程"></a>任务提交流程</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-13-20-31-40-image.png"></p><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Flink运行时的组件&quot;&gt;&lt;a href=&quot;#Flink运行时的组件&quot; class=&quot;headerlink&quot; title=&quot;Flink运行时的组件&quot;&gt;&lt;/a&gt;Flink运行时的组件&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;作业管理器（JobManager）&lt;/p&gt;
+&lt;/l</summary>
+      
+    
+    
+    
+    
+    <category term="flink" scheme="http://example.com/tags/flink/"/>
+    
+  </entry>
+  
+  <entry>
     <title>flink-Yarn</title>
     <link href="http://example.com/2022/12/12/flink-Yarn/"/>
     <id>http://example.com/2022/12/12/flink-Yarn/</id>
     <published>2022-12-12T15:43:53.000Z</published>
-    <updated>2022-12-12T16:04:01.079Z</updated>
+    <updated>2022-12-12T16:05:08.080Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Flink-on-Yarn"><a href="#Flink-on-Yarn" class="headerlink" title="Flink on Yarn"></a>Flink on Yarn</h2><ul><li>要求Flink是有Hadoop支持的版本，Hadoop环境需要2.2以上；</li></ul><h3 id="Session-cluster模式"><a href="#Session-cluster模式" class="headerlink" title="Session-cluster模式"></a>Session-cluster模式</h3><ul><li><p>先启动集群，yarn会申请一块空间后，资源保持不变，如果资源满了，下一个作业酒无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，下一个作业才会正常提交；</p></li><li><p>所有作业共享Dispacher和ResourceManager：共享资源；</p></li><li><p>适合规模小执行时间短的作业；</p></li></ul><h3 id="Per-Job-Cluster模式"><a href="#Per-Job-Cluster模式" class="headerlink" title="Per-Job-Cluster模式"></a>Per-Job-Cluster模式</h3><ul><li><p>一个Job对应一个集群，没提交一个作业会根据自身情况都会单独向yarn申请资源，直到作业完成，一个作业的成功与否并不会影响到下一个作业的提交和运行；</p></li><li><p>独享Dispacher和ResourceManager，按需申请资源；</p></li><li><p>适合大规模长时间运行的作业；</p></li></ul><h2 id="Kubernetes部署"><a href="#Kubernetes部署" class="headerlink" title="Kubernetes部署"></a>Kubernetes部署</h2><ul><li><p>在K8s上构建Flink Session Cluster，需要将集群的组件对应的docker镜像分别在k8s上启动，包括JobManager、TaskManager、JobManagerServer三个镜像服务；</p></li><li><p>启动Flink Session Cluster</p></li><li><p>访问FlinkUI页面</p></li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Flink-on-Yarn"><a href="#Flink-on-Yarn" class="headerlink" title="Flink on Yarn"></a>Flink on Yarn</h2><ul><li>要求Flink是有Hadoop支持的版本，Hadoop环境需要2.2以上；</li></ul><h3 id="Session-cluster模式"><a href="#Session-cluster模式" class="headerlink" title="Session-cluster模式"></a>Session-cluster模式</h3><ul><li><p>先启动集群，yarn会申请一块空间后，资源保持不变，如果资源满了，下一个作业酒无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，下一个作业才会正常提交；</p></li><li><p>所有作业共享Dispacher和ResourceManager：共享资源；</p></li><li><p>适合规模小执行时间短的作业；</p></li></ul><h3 id="Per-Job-Cluster模式"><a href="#Per-Job-Cluster模式" class="headerlink" title="Per-Job-Cluster模式"></a>Per-Job-Cluster模式</h3><ul><li><p>一个Job对应一个集群，没提交一个作业会根据自身情况都会单独向yarn申请资源，直到作业完成，一个作业的成功与否并不会影响到下一个作业的提交和运行；</p></li><li><p>独享Dispacher和ResourceManager，按需申请资源；</p></li><li><p>适合大规模长时间运行的作业；</p></li></ul><h2 id="Kubernetes部署"><a href="#Kubernetes部署" class="headerlink" title="Kubernetes部署"></a>Kubernetes部署</h2><ul><li><p>在K8s上构建Flink Session Cluster，需要将集群的组件对应的docker镜像分别在k8s上启动，包括JobManager、TaskManager、JobManagerServer三个镜像服务；</p></li><li><p>启动Flink Session Cluster</p></li><li><p>访问FlinkUI页面</p></li></ul>]]></content>
     
     
       
@@ -44,7 +135,7 @@
     <link href="http://example.com/2022/12/12/flink-standalone/"/>
     <id>http://example.com/2022/12/12/flink-standalone/</id>
     <published>2022-12-12T15:42:46.000Z</published>
-    <updated>2022-12-12T15:43:38.239Z</updated>
+    <updated>2022-12-18T06:46:03.388Z</updated>
     
     <content type="html"><![CDATA[<h2 id="StandAlone"><a href="#StandAlone" class="headerlink" title="StandAlone"></a>StandAlone</h2><p>单机模式，没有集群模式</p>]]></content>
     
@@ -67,8 +158,15 @@
     <link href="http://example.com/2022/12/11/git/"/>
     <id>http://example.com/2022/12/11/git/</id>
     <published>2022-12-11T15:58:24.000Z</published>
-    <updated>2022-12-11T15:59:02.255Z</updated>
+    <updated>2022-12-14T13:13:22.749Z</updated>
     
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
     
     
     
@@ -192,9 +290,9 @@
     <link href="http://example.com/2022/12/03/testblog/"/>
     <id>http://example.com/2022/12/03/testblog/</id>
     <published>2022-12-02T19:00:13.000Z</published>
-    <updated>2022-12-02T19:02:59.773Z</updated>
+    <updated>2022-12-15T15:20:54.655Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="大数据基础"><a href="#大数据基础" class="headerlink" title="大数据基础"></a>大数据基础</h2><h3 id="flume"><a href="#flume" class="headerlink" title="flume"></a>flume</h3><h3 id="kafka"><a href="#kafka" class="headerlink" title="kafka"></a>kafka</h3><h3 id="hadoop"><a href="#hadoop" class="headerlink" title="hadoop"></a>hadoop</h3><h3 id="hbase"><a href="#hbase" class="headerlink" title="hbase"></a>hbase</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="大数据基础"><a href="#大数据基础" class="headerlink" title="大数据基础"></a>大数据基础</h2><h3 id="flume"><a href="#flume" class="headerlink" title="flume"></a>flume</h3><h3 id="kafka"><a href="#kafka" class="headerlink" title="kafka"></a>kafka</h3><h3 id="hadoop"><a href="#hadoop" class="headerlink" title="hadoop"></a>hadoop</h3><h3 id="hbase"><a href="#hbase" class="headerlink" title="hbase"></a>hbase</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><h2 id="flink"><a href="#flink" class="headerlink" title="flink"></a>flink</h2><ol><li><p>内置函数；</p></li><li><p>lambda表达式；</p></li><li><p>范型擦除；</p></li><li></li></ol>]]></content>
     
     
       

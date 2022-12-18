@@ -25,7 +25,7 @@
 <meta property="og:description" content="Flink on Yarn 要求Flink是有Hadoop支持的版本，Hadoop环境需要2.2以上；  Session-cluster模式 先启动集群，yarn会申请一块空间后，资源保持不变，如果资源满了，下一个作业酒无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，下一个作业才会正常提交；  所有作业共享Dispacher和ResourceManager：共享资源；  适合规模">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-12T15:43:53.000Z">
-<meta property="article:modified_time" content="2022-12-12T16:04:01.079Z">
+<meta property="article:modified_time" content="2022-12-12T16:05:08.080Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="flink">
 <meta name="twitter:card" content="summary"><meta name="generator" content="Hexo 6.3.0"></head>
@@ -103,7 +103,6 @@
 </li>
 <li><p>访问FlinkUI页面</p>
 </li>
-<li></li>
 </ul>
 
       
@@ -126,7 +125,14 @@
   
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Flink运行架构
+        
+      </div>
+    </a>
   
   
     <a href="/2022/12/12/flink-standalone/" id="article-nav-older" class="article-nav-link-wrap older">
