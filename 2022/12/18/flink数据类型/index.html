@@ -17,15 +17,15 @@
 <link rel="stylesheet" href="/css/highlight.css">
 
   
-  <meta name="description" content="数据类型1. 基础数据类型Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …； 2. Java和Scala元组（Tuple）3. Scala样例类（case classes）4. Java 简单对象(POJOs)5. 其他Arrays, Lists, Maps, Enums, 等等； 实现 UDF 函数——更细粒度的控制流1.">
+  <meta name="description" content="数据类型1. 基础数据类型Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …； 2. Java和Scala元组（Tuple）3. Scala样例类（case classes）4. Java 简单对象(POJOs)5. 其他Arrays, Lists, Maps, Enums, 等等； 实现 FLink UDF 函数——更细粒度的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flink数据类型">
 <meta property="og:url" content="http://example.com/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="数据类型1. 基础数据类型Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …； 2. Java和Scala元组（Tuple）3. Scala样例类（case classes）4. Java 简单对象(POJOs)5. 其他Arrays, Lists, Maps, Enums, 等等； 实现 UDF 函数——更细粒度的控制流1.">
+<meta property="og:description" content="数据类型1. 基础数据类型Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …； 2. Java和Scala元组（Tuple）3. Scala样例类（case classes）4. Java 简单对象(POJOs)5. 其他Arrays, Lists, Maps, Enums, 等等； 实现 FLink UDF 函数——更细粒度的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-18T08:58:56.000Z">
-<meta property="article:modified_time" content="2022-12-18T13:47:56.677Z">
+<meta property="article:modified_time" content="2022-12-18T13:50:47.392Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="flink">
 <meta name="twitter:card" content="summary"><meta name="generator" content="Hexo 6.3.0"></head>
@@ -79,7 +79,7 @@
       
         <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="1-基础数据类型"><a href="#1-基础数据类型" class="headerlink" title="1. 基础数据类型"></a>1. 基础数据类型</h3><p>Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …；</p>
 <h3 id="2-Java和Scala元组（Tuple）"><a href="#2-Java和Scala元组（Tuple）" class="headerlink" title="2. Java和Scala元组（Tuple）"></a>2. Java和Scala元组（Tuple）</h3><h3 id="3-Scala样例类（case-classes）"><a href="#3-Scala样例类（case-classes）" class="headerlink" title="3. Scala样例类（case classes）"></a>3. Scala样例类（case classes）</h3><h3 id="4-Java-简单对象-POJOs"><a href="#4-Java-简单对象-POJOs" class="headerlink" title="4. Java 简单对象(POJOs)"></a>4. Java 简单对象(POJOs)</h3><h3 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h3><p>Arrays, Lists, Maps, Enums, 等等；</p>
-<h2 id="实现-UDF-函数——更细粒度的控制流"><a href="#实现-UDF-函数——更细粒度的控制流" class="headerlink" title="实现 UDF 函数——更细粒度的控制流"></a>实现 UDF 函数——更细粒度的控制流</h2><h3 id="1-函数类-Function-Classes"><a href="#1-函数类-Function-Classes" class="headerlink" title="1. 函数类(Function Classes)"></a>1. 函数类(Function Classes)</h3><h3 id="2-匿名函数-Lambda-Functions"><a href="#2-匿名函数-Lambda-Functions" class="headerlink" title="2. 匿名函数(Lambda Functions)"></a>2. 匿名函数(Lambda Functions)</h3><h3 id="3-富函数-Rich-Functions"><a href="#3-富函数-Rich-Functions" class="headerlink" title="3. 富函数(Rich Functions)"></a>3. 富函数(Rich Functions)</h3><p>富函数是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同就在于，可以获取运行环境的上下文，并拥有一些生命周期的方法，所以可以实现更复杂的功能；</p>
+<h2 id="实现-FLink-UDF-函数——更细粒度的控制流"><a href="#实现-FLink-UDF-函数——更细粒度的控制流" class="headerlink" title="实现 FLink UDF 函数——更细粒度的控制流"></a>实现 FLink UDF 函数——更细粒度的控制流</h2><h3 id="1-函数类-Function-Classes"><a href="#1-函数类-Function-Classes" class="headerlink" title="1. 函数类(Function Classes)"></a>1. 函数类(Function Classes)</h3><h3 id="2-匿名函数-Lambda-Functions"><a href="#2-匿名函数-Lambda-Functions" class="headerlink" title="2. 匿名函数(Lambda Functions)"></a>2. 匿名函数(Lambda Functions)</h3><h3 id="3-富函数-Rich-Functions"><a href="#3-富函数-Rich-Functions" class="headerlink" title="3. 富函数(Rich Functions)"></a>3. 富函数(Rich Functions)</h3><p>富函数是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同就在于，可以获取运行环境的上下文，并拥有一些生命周期的方法，所以可以实现更复杂的功能；</p>
 
       
     </div>
@@ -101,7 +101,14 @@
   
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2022/12/18/flink-sink/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          flink-sink
+        
+      </div>
+    </a>
   
   
     <a href="/2022/12/18/Transform/" id="article-nav-older" class="article-nav-link-wrap older">
