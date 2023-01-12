@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-12T14:53:06.913Z</updated>
+  <updated>2023-01-12T15:59:03.391Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java bean</title>
+    <link href="http://example.com/2023/01/12/java-bean/"/>
+    <id>http://example.com/2023/01/12/java-bean/</id>
+    <published>2023-01-12T15:24:41.000Z</published>
+    <updated>2023-01-12T15:59:03.391Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是java-bean"><a href="#什么是java-bean" class="headerlink" title="什么是java bean"></a>什么是java bean</h3><ol><li><p>bean是对象；</p></li><li><p>由Spring中一个叫loC的东西管理；</p></li><li><p>我们的应用程序由一个一个bean构成；</p></li></ol><h3 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h3><p>Bean在Spring中的某种行为模式：</p><p>Bean对象是默认的单例作用域，如果有任何地方有任何修改了这个单例的对象，那么其他类再调用就会得到一个修改后的值；</p><h5 id="作用域分类"><a href="#作用域分类" class="headerlink" title="作用域分类"></a>作用域分类</h5><ol><li><p>singleton：单例作用域；</p></li><li><p>prototype：原型作用域；</p></li><li><p>request：请求作用域；</p></li><li><p>session： 会话作用域；</p></li><li><p>application：全局作用域；</p></li></ol><p>后三种作用域，只适用于Spring MVC框架；</p><h5 id="bean规范"><a href="#bean规范" class="headerlink" title="bean规范"></a>bean规范</h5><ol><li><p>所有属性为private；</p></li><li><p>提供默认构造方法；</p></li><li><p>提供setter和getter；</p></li><li><p>实现serializable接口；</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;什么是java-bean&quot;&gt;&lt;a href=&quot;#什么是java-bean&quot; class=&quot;headerlink&quot; title=&quot;什么是java bean&quot;&gt;&lt;/a&gt;什么是java bean&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;bean是对象；&lt;/p&gt;
+&lt;/li&gt;
+&lt;l</summary>
+      
+    
+    
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>lombok</title>
@@ -420,28 +445,6 @@
     
     
     <category term="flume" scheme="http://example.com/tags/flume/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我们一起叠buff</title>
-    <link href="http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/"/>
-    <id>http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/</id>
-    <published>2022-12-02T19:11:43.000Z</published>
-    <updated>2022-12-09T05:46:19.184Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="我们是谁？"><a href="#我们是谁？" class="headerlink" title="我们是谁？"></a>我们是谁？</h2><p>我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，而我要做的是 大数据开发、大数据平台开发；</p><h2 id="为什么说是叠buff"><a href="#为什么说是叠buff" class="headerlink" title="为什么说是叠buff"></a>为什么说是叠buff</h2><p>因为今天突发奇想，觉得人生道路上，如果把工作当成是叠buff，那人生就有趣多了。其实真正有趣的不是完成的过程，是完成后达到的标准是什么，我们的人生就像是打游戏一样，过关、斩将，一关一关的过。就如同现在我们的人生一样，过关斩将也是常有的事情。</p><h4 id="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"><a href="#最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗" class="headerlink" title="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"></a>最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗</h4>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;我们是谁？&quot;&gt;&lt;a href=&quot;#我们是谁？&quot; class=&quot;headerlink&quot; title=&quot;我们是谁？&quot;&gt;&lt;/a&gt;我们是谁？&lt;/h2&gt;&lt;p&gt;我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，</summary>
-      
-    
-    
-    
-    
-    <category term="buff" scheme="http://example.com/tags/buff/"/>
     
   </entry>
   

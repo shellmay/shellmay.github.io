@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Reduce一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。 1&#x2F;&#x2F;keyStream-&gt;DataStream  Split和Select按照某种特征把DataSream拆分成两个或者多个DataStream。 1&#x2F;&#x2F;DataStream-&gt;SlpitStream  Connect&amp;CoMapDataStream → ConnectedStreams">
+    <meta name="description" content="什么是java bean bean是对象；  由Spring中一个叫loC的东西管理；  我们的应用程序由一个一个bean构成；   Bean的作用域Bean在Spring中的某种行为模式： Bean对象是默认的单例作用域，如果有任何地方有任何修改了这个单例的对象，那么其他类再调用就会得到一个修改后的值； 作用域分类 singleton：单例作用域；  prototype：原型作用域；  requ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Transform">
-<meta property="og:url" content="http://example.com/2022/12/18/Transform/index.html">
+<meta property="og:title" content="java bean">
+<meta property="og:url" content="http://example.com/2023/01/12/java-bean/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Reduce一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。 1&#x2F;&#x2F;keyStream-&gt;DataStream  Split和Select按照某种特征把DataSream拆分成两个或者多个DataStream。 1&#x2F;&#x2F;DataStream-&gt;SlpitStream  Connect&amp;CoMapDataStream → ConnectedStreams">
+<meta property="og:description" content="什么是java bean bean是对象；  由Spring中一个叫loC的东西管理；  我们的应用程序由一个一个bean构成；   Bean的作用域Bean在Spring中的某种行为模式： Bean对象是默认的单例作用域，如果有任何地方有任何修改了这个单例的对象，那么其他类再调用就会得到一个修改后的值； 作用域分类 singleton：单例作用域；  prototype：原型作用域；  requ">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-18T06:46:59.000Z">
-<meta property="article:modified_time" content="2023-01-11T14:07:49.430Z">
+<meta property="article:published_time" content="2023-01-12T15:24:41.000Z">
+<meta property="article:modified_time" content="2023-01-12T15:59:03.391Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="flink">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2022/12/18/Transform/">
+<link rel="canonical" href="http://example.com/2023/01/12/java-bean/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/12/18/Transform/","path":"2022/12/18/Transform/","title":"Transform"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/01/12/java-bean/","path":"2023/01/12/java-bean/","title":"java bean"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Transform | Hexo</title>
+<title>java bean | Hexo</title>
   
 
 
@@ -106,7 +106,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reduce"><span class="nav-number">1.</span> <span class="nav-text">Reduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Split%E5%92%8CSelect"><span class="nav-number">2.</span> <span class="nav-text">Split和Select</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect-amp-CoMap"><span class="nav-number">3.</span> <span class="nav-text">Connect&amp;CoMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Union"><span class="nav-number">4.</span> <span class="nav-text">Union</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFjava-bean"><span class="nav-number">1.</span> <span class="nav-text">什么是java bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bean%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">2.</span> <span class="nav-text">Bean的作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%88%86%E7%B1%BB"><span class="nav-number">2.0.1.</span> <span class="nav-text">作用域分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bean%E8%A7%84%E8%8C%83"><span class="nav-number">2.0.2.</span> <span class="nav-text">bean规范</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,7 +151,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/Transform/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/12/java-bean/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,12 +164,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Transform | Hexo">
+      <meta itemprop="name" content="java bean | Hexo">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Transform
+          java bean
         </h1>
 
         <div class="post-meta-container">
@@ -179,15 +179,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2022-12-18 14:46:59" itemprop="dateCreated datePublished" datetime="2022-12-18T14:46:59+08:00">2022-12-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-11 22:07:49" itemprop="dateModified" datetime="2023-01-11T22:07:49+08:00">2023-01-11</time>
+      <time title="Created: 2023-01-12 23:24:41 / Modified: 23:59:03" itemprop="dateCreated datePublished" datetime="2023-01-12T23:24:41+08:00">2023-01-12</time>
     </span>
 
   
@@ -200,18 +194,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p>
-<p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p>
-<p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>
+        <h3 id="什么是java-bean"><a href="#什么是java-bean" class="headerlink" title="什么是java bean"></a>什么是java bean</h3><ol>
+<li><p>bean是对象；</p>
+</li>
+<li><p>由Spring中一个叫loC的东西管理；</p>
+</li>
+<li><p>我们的应用程序由一个一个bean构成；</p>
+</li>
+</ol>
+<h3 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h3><p>Bean在Spring中的某种行为模式：</p>
+<p>Bean对象是默认的单例作用域，如果有任何地方有任何修改了这个单例的对象，那么其他类再调用就会得到一个修改后的值；</p>
+<h5 id="作用域分类"><a href="#作用域分类" class="headerlink" title="作用域分类"></a>作用域分类</h5><ol>
+<li><p>singleton：单例作用域；</p>
+</li>
+<li><p>prototype：原型作用域；</p>
+</li>
+<li><p>request：请求作用域；</p>
+</li>
+<li><p>session： 会话作用域；</p>
+</li>
+<li><p>application：全局作用域；</p>
+</li>
+</ol>
+<p>后三种作用域，只适用于Spring MVC框架；</p>
+<h5 id="bean规范"><a href="#bean规范" class="headerlink" title="bean规范"></a>bean规范</h5><ol>
+<li><p>所有属性为private；</p>
+</li>
+<li><p>提供默认构造方法；</p>
+</li>
+<li><p>提供setter和getter；</p>
+</li>
+<li><p>实现serializable接口；</p>
+</li>
+</ol>
 
     </div>
 
@@ -221,21 +236,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/flink/" rel="tag"># flink</a>
+              <a href="/tags/java/" rel="tag"># java</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/" rel="prev" title="flink流处理API">
-                  <i class="fa fa-chevron-left"></i> flink流处理API
+                <a href="/2023/01/11/lombok/" rel="prev" title="lombok">
+                  <i class="fa fa-chevron-left"></i> lombok
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="next" title="flink数据类型">
-                  flink数据类型 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

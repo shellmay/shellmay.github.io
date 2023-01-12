@@ -113,12 +113,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -135,6 +135,93 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/Transform/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/18/Transform/" class="post-title-link" itemprop="url">Transform</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-18 14:46:59" itemprop="dateCreated datePublished" datetime="2022-12-18T14:46:59+08:00">2022-12-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-01-11 22:07:49" itemprop="dateModified" datetime="2023-01-11T22:07:49+08:00">2023-01-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p>
+<p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p>
+<p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -915,83 +1002,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h3 id="failover和负载均衡"><a href="#failover和负载均衡" class="headerlink" title="failover和负载均衡"></a>failover和负载均衡</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/" class="post-title-link" itemprop="url">我们一起叠buff</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-12-03 03:11:43" itemprop="dateCreated datePublished" datetime="2022-12-03T03:11:43+08:00">2022-12-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-09 13:46:19" itemprop="dateModified" datetime="2022-12-09T13:46:19+08:00">2022-12-09</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="我们是谁？"><a href="#我们是谁？" class="headerlink" title="我们是谁？"></a>我们是谁？</h2><p>我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，而我要做的是 大数据开发、大数据平台开发；</p>
-<h2 id="为什么说是叠buff"><a href="#为什么说是叠buff" class="headerlink" title="为什么说是叠buff"></a>为什么说是叠buff</h2><p>因为今天突发奇想，觉得人生道路上，如果把工作当成是叠buff，那人生就有趣多了。其实真正有趣的不是完成的过程，是完成后达到的标准是什么，我们的人生就像是打游戏一样，过关、斩将，一关一关的过。就如同现在我们的人生一样，过关斩将也是常有的事情。</p>
-<h4 id="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"><a href="#最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗" class="headerlink" title="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"></a>最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗</h4>
       
     </div>
 
