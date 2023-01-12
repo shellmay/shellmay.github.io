@@ -1,525 +1,1107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Hexo - </title>
-    
-      <link rel="icon" href="/img/favicon.ico">
-    
-    <meta name="keyword"  content="">
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-    
-      
-<link rel="stylesheet" href="/css/helpers.css">
-    
-    
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo</title>
   
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
 
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-<body>
-  <div class="loading-wrapper" data-loading="true">
-    <div class="loading">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <div class="page" data-filter="true">
-    <div class="head" data-show="true">
-      <header class="head-header">
-  <div class="head-author">
-    <a href="/" class="head-author-link">
-      Hexo</a>
-    </div>
-  <div class="head-right">
-    <!-- <div class="head-search">
-      <input class="head-searchK"></input>
-      <span class="head-searchT">
-        Search</span>
-    </div> -->
-    <button class="bar-wrap" id="bar-wrap-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <div class="head-about" id="head-about">
-      
-      <a class="head-about-link" href="/about">
-        关于</a>
-      
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="main">
-      
-
-<div class="menu-bar-head" id="menu-bar" data-show="false">
-  <ul class="menu-bar-ul">
-    
-      
-      <li class="menu-bar-item ">
-          
-              <a href="/categories/Posts/">
-          
-              <span>Posts1</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item ">
-          
-              <a href="/categories/Posts2/">
-          
-              <span>Posts2</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item  border ">
-          
-            <a href="/archives">
-          
-              <span>Archives</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item ">
-          
-            <a href="/tags">
-          
-              <span>Tags</span>
-            </a>
-      </li>
-    
-    
-      <li class="menu-bar-item">
-        <a href="/about">
-          <span>关于</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-      <div class="menu-nav">
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-        <a href="/archives">
-      
-      <span>Archives</span></a>
-    </div>
-    <div class="menu-nav-item-cont archives">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul>
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-          <a href="/categories/Posts/">
-      
-      <span>Posts1</span></a>
-    </div>
-    <div class="menu-nav-item-cont posts">
-      
-      <p class="menu-nav-item empty">Empty~</p>
-
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-          <a href="/categories/Posts2/">
-      
-      <span>Posts2</span></a>
-    </div>
-    <div class="menu-nav-item-cont posts">
-      
-      <p class="menu-nav-item empty">Empty~</p>
-
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-        <a href="/tags">
-      
-      <span>Tags</span></a>
-    </div>
-    <div class="menu-nav-item-cont tags">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buff/" rel="tag">buff</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flink/" rel="tag">flink</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flume/" rel="tag">flume</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="tag">负载均衡</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a><span class="tag-list-count">1</span></li></ul>
-
-    </div>
-  </div>
-  
-</div>
-
-<div id="index-content" class="content">
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2023/01/07/springboot-01/">
-        springboot-01
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2023-01-07 21:01:53" datetime="2023-01-07T13:01:53.000Z" itemprop="datePublished">
-  2023-01-07</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/" rel="tag">springboot</a></li></ul>
-
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01/">
-        数据结构-01
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-30 22:34:24" datetime="2022-12-30T14:34:24.000Z" itemprop="datePublished">
-  2022-12-30</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+  <div class="site-meta">
 
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/20/flnik-window/">
-        flnik-window
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-20 22:49:55" datetime="2022-12-20T14:49:55.000Z" itemprop="datePublished">
-  2022-12-20</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/18/flink-sink/">
-        flink-sink
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-18 22:17:28" datetime="2022-12-18T14:17:28.000Z" itemprop="datePublished">
-  2022-12-18</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        flink数据类型
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-18 16:58:56" datetime="2022-12-18T08:58:56.000Z" itemprop="datePublished">
-  2022-12-18</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/18/Transform/">
-        Transform
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-18 14:46:59" datetime="2022-12-18T06:46:59.000Z" itemprop="datePublished">
-  2022-12-18</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/">
-        flink流处理API
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-14 21:14:09" datetime="2022-12-14T13:14:09.000Z" itemprop="datePublished">
-  2022-12-14</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/">
-        Flink运行架构
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-13 00:20:43" datetime="2022-12-12T16:20:43.000Z" itemprop="datePublished">
-  2022-12-13</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/12/flink-Yarn/">
-        flink-Yarn
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-12 23:43:53" datetime="2022-12-12T15:43:53.000Z" itemprop="datePublished">
-  2022-12-12</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/12/flink-standalone/">
-        flink-standalone
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-12 23:42:46" datetime="2022-12-12T15:42:46.000Z" itemprop="datePublished">
-  2022-12-12</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-
-  <div class="pagination">
-    
-
-  <div class="nav-link next">
-    <a href="/page/2/">
-      <span>Next</span>
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-    <i class="icon icon-chevron-right"></i>
   </div>
 
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
   </div>
 </div>
-    </div>
-    <footer class="footer-nav">
-      <div class="footer">
-        <div class="back-top" id="back-top" title="Back to top">
-          <i class="icon icon-chevron-bar-up"></i>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-        <span class="footer-msg">
-  
-    <div class="icp">
-      <img src="/img/icp.png" alt="icp Record">
-      <a href="https://beian.miit.gov.cn/" class="icp-text" target="_blank">
-        京ICP备2021005293号
-      </a>
-    </div>
-  
+        <!--/noindex-->
 
-  
-
-  
-  
-
-    <div>
-      <span id="busuanzi_container_site_pv">
-        <span id="busuanzi_value_site_pv">?</span> PV
-      </span>
-      <span id="busuanzi_container_site_uv">
-        <span id="busuanzi_value_site_uv">?</span> UV
-      </span>
-    </div>
-
-  
-
-
-
-  Copyright &copy;
-  2020
-  
-  
-    <span class="timeDivide">-</span>
-    2023
-  
-  John Doe.
-  Power by
-  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
-  and
-  <a href="https://github.com/Cerallin/hexo-theme-yuzu"
-      target="_blank" rel="external nofollow" title="v2.4">
-    Theme Yuzu</a>.
-</span>
-
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
       </div>
-    </footer>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
     
 
 
-<script src="/js/clipboard/clipboard.min.js"></script>
-
-
-<script src="/js/theme.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-
-  
-  <script>
-      expend = "Expand";
-      collapse = "Collapse";
-  </script>
+<div class="post-block">
   
   
-<script src="/js/toc.js"></script>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/11/lombok/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/11/lombok/" class="post-title-link" itemprop="url">lombok</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-01-11 22:05:55" itemprop="dateCreated datePublished" datetime="2023-01-11T22:05:55+08:00">2023-01-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-01-12 22:53:06" itemprop="dateModified" datetime="2023-01-12T22:53:06+08:00">2023-01-12</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="如何使用Lombok"><a href="#如何使用Lombok" class="headerlink" title="如何使用Lombok"></a>如何使用Lombok</h3><p>在java中使用lombok消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。</p>
+<p>lombok使用注解简化了java中属性的setter和getter等方法；</p>
+<h5 id="添加lombok依赖"><a href="#添加lombok依赖" class="headerlink" title="添加lombok依赖"></a>添加lombok依赖</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.16.16&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Lombok注解"><a href="#Lombok注解" class="headerlink" title="Lombok注解"></a>Lombok注解</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Data：注解在类上，将类提供的所有属性都添加get、set方法，并添加、equals</span><br></pre></td></tr></table></figure>
+
+<p>普通的bean</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setId</span><span class="params">(String id)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(Integer age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>使用lombok</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Setter</span></span><br><span class="line"><span class="meta">@Getter</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setId(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    user.setName(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    user.setAge(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
 
 
+    
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/09/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E5%88%B0github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/09/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E5%88%B0github/" class="post-title-link" itemprop="url">本地项目添加到github</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-01-09 00:22:53 / Modified: 01:56:57" itemprop="dateCreated datePublished" datetime="2023-01-09T00:22:53+08:00">2023-01-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="本篇要解决的问题是：如何把本地项目提交到git"><a href="#本篇要解决的问题是：如何把本地项目提交到git" class="headerlink" title="本篇要解决的问题是：如何把本地项目提交到git"></a>本篇要解决的问题是：如何把本地项目提交到git</h3><ol>
+<li><p>首先，在github生成新的仓库；</p>
+</li>
+<li><p>赋值仓库链接；</p>
+</li>
+<li></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/08/mac/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/08/mac/" class="post-title-link" itemprop="url">mac</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-01-08 23:52:47" itemprop="dateCreated datePublished" datetime="2023-01-08T23:52:47+08:00">2023-01-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/08/mac-github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/08/mac-github/" class="post-title-link" itemprop="url">mac-github</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-01-08 23:51:58" itemprop="dateCreated datePublished" datetime="2023-01-08T23:51:58+08:00">2023-01-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/07/springboot-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/07/springboot-01/" class="post-title-link" itemprop="url">springboot-01</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-01-07 21:01:53 / Modified: 21:02:52" itemprop="dateCreated datePublished" datetime="2023-01-07T21:01:53+08:00">2023-01-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2023-01-07-21-02-50-image.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01/" class="post-title-link" itemprop="url">数据结构-01</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-30 22:34:24" itemprop="dateCreated datePublished" datetime="2022-12-30T22:34:24+08:00">2022-12-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-01-11 22:07:45" itemprop="dateModified" datetime="2023-01-11T22:07:45+08:00">2023-01-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="数据结构-算法-x3D-解决问题"><a href="#数据结构-算法-x3D-解决问题" class="headerlink" title="数据结构+算法&#x3D;解决问题"></a>数据结构+算法&#x3D;解决问题</h4><h4 id="数据结构分为"><a href="#数据结构分为" class="headerlink" title="数据结构分为"></a>数据结构分为</h4><ol>
+<li><p>线性结构</p>
+<p>数组、队列、链表和栈；</p>
+</li>
+<li><p>非线性结构</p>
+<p>二维数组、多维数组、广义表、树结构、图结构；</p>
+</li>
+</ol>
+<h3 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h3><p>稀疏数组</p>
+<p>如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">0</th>
+<th>0</th>
+<th>0</th>
+<th align="center">0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td>0</td>
+<td>0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td>2</td>
+<td>0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td>0</td>
+<td>0</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>row</th>
+<th>col</th>
+<th>val</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>二维数组转稀疏数组的思路</p>
+<ol>
+<li><p>遍历原始的二维数组，得到有效数据的个数sum</p>
+</li>
+<li><p>根据sum就可以创建稀疏数组spareseArr int[sum+1][3]</p>
+</li>
+<li><p>将二维数组的有效数据存入稀疏数组</p>
+</li>
+</ol>
+<p>稀疏数组转二维数组的思路</p>
+<ol>
+<li><p>先读取数组的第一行，根据第一行的数据，创建原属的二维数组，比如上面的chessArr2&#x3D;int[11][11]</p>
+</li>
+<li><p>在读取稀疏数组后几行的数据，并赋给原始的二维数组即可；</p>
+</li>
+</ol>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/20/flnik-window/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/20/flnik-window/" class="post-title-link" itemprop="url">flnik-window</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-20 22:49:55" itemprop="dateCreated datePublished" datetime="2022-12-20T22:49:55+08:00">2022-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-21 22:01:02" itemprop="dateModified" datetime="2022-12-21T22:01:02+08:00">2022-12-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="window-窗口"><a href="#window-窗口" class="headerlink" title="window 窗口"></a>window 窗口</h3><ul>
+<li>把无限流中切割为有限流的方式，它会将流数据分发到有限大小的桶（bucket）中进行分析；</li>
+</ul>
+<ol>
+<li><p>时间窗口</p>
+<ul>
+<li><p>滚动时间窗口</p>
+</li>
+<li><p>滑动时间窗口</p>
+</li>
+<li><p>会话窗口</p>
+</li>
+</ul>
+</li>
+<li><p>计数窗口</p>
+<ul>
+<li><p>滚动计数窗口</p>
+</li>
+<li><p>滑动计数窗口</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="滚动窗口（Tumbling-windows）"><a href="#滚动窗口（Tumbling-windows）" class="headerlink" title="滚动窗口（Tumbling windows）"></a>滚动窗口（Tumbling windows）</h3><ul>
+<li><p>将数据依据固定的窗口长度对数据进行切分；</p>
+</li>
+<li><p>时间对齐，窗口长度固定，没有重叠；</p>
+</li>
+</ul>
+<h3 id="滑动窗口（Sliding-Windows）"><a href="#滑动窗口（Sliding-Windows）" class="headerlink" title="滑动窗口（Sliding Windows）"></a>滑动窗口（Sliding Windows）</h3><ul>
+<li><p>滑动窗口是固定窗口的更广泛的一种形式，滑动窗口由固定的窗口长度和滑动间隔组成</p>
+</li>
+<li><p>窗口长度固定，可以重叠；</p>
+</li>
+</ul>
+<h3 id="会话窗口（Session-Windows）"><a href="#会话窗口（Session-Windows）" class="headerlink" title="会话窗口（Session Windows）"></a>会话窗口（Session Windows）</h3><ul>
+<li><p>由一系列事件组合一个指定时间长度的timeout间隙组成，也就是一段时间没有接收到新数据就会生成新的窗口；</p>
+</li>
+<li><p>特点：时间无对齐</p>
+</li>
+</ul>
+<h3 id="Window-API"><a href="#Window-API" class="headerlink" title="Window API"></a>Window API</h3><h3 id="窗口函数（windows-function）"><a href="#窗口函数（windows-function）" class="headerlink" title="窗口函数（windows function）"></a>窗口函数（windows function）</h3><ul>
+<li><p>window function定义了要对窗口手机的数据做计算操作</p>
+</li>
+<li><p>可以分为两类：</p>
+<ul>
+<li><p>增量聚合函数</p>
+<ul>
+<li><p>每条数据到来就计算，保存一个简单状态</p>
+</li>
+<li><p>ReduceFunction AggregateFunction</p>
+</li>
+</ul>
+</li>
+<li><p>全窗口函数</p>
+<ul>
+<li><p>先把窗口所有数据收集起来，等到计算的时候会遍历所有数据</p>
+</li>
+<li><p>ProcessWindowsFunction，WindowFunction</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="时间语义函数"><a href="#时间语义函数" class="headerlink" title="时间语义函数"></a>时间语义函数</h2><h3 id="水位线（waterMark）"><a href="#水位线（waterMark）" class="headerlink" title="水位线（waterMark）"></a>水位线（waterMark）</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/flink-sink/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/18/flink-sink/" class="post-title-link" itemprop="url">flink-sink</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-18 22:17:28" itemprop="dateCreated datePublished" datetime="2022-12-18T22:17:28+08:00">2022-12-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-19 21:42:25" itemprop="dateModified" datetime="2022-12-19T21:42:25+08:00">2022-12-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="kafka"><a href="#kafka" class="headerlink" title="kafka"></a>kafka</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//flink连接kafka</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主函数中调用</span></span><br><span class="line"><span class="type">FlinkJedisPoolConfig</span> <span class="variable">config</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FlinkJedisPoolConfig</span>.Builder()</span><br><span class="line">.setHost(<span class="string">&quot;localhost&quot;</span>)</span><br><span class="line">.setPort(<span class="number">6379</span>)</span><br><span class="line">.build();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">flink数据类型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-18 16:58:56 / Modified: 21:50:47" itemprop="dateCreated datePublished" datetime="2022-12-18T16:58:56+08:00">2022-12-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="1-基础数据类型"><a href="#1-基础数据类型" class="headerlink" title="1. 基础数据类型"></a>1. 基础数据类型</h3><p>Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …；</p>
+<h3 id="2-Java和Scala元组（Tuple）"><a href="#2-Java和Scala元组（Tuple）" class="headerlink" title="2. Java和Scala元组（Tuple）"></a>2. Java和Scala元组（Tuple）</h3><h3 id="3-Scala样例类（case-classes）"><a href="#3-Scala样例类（case-classes）" class="headerlink" title="3. Scala样例类（case classes）"></a>3. Scala样例类（case classes）</h3><h3 id="4-Java-简单对象-POJOs"><a href="#4-Java-简单对象-POJOs" class="headerlink" title="4. Java 简单对象(POJOs)"></a>4. Java 简单对象(POJOs)</h3><h3 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h3><p>Arrays, Lists, Maps, Enums, 等等；</p>
+<h2 id="实现-FLink-UDF-函数——更细粒度的控制流"><a href="#实现-FLink-UDF-函数——更细粒度的控制流" class="headerlink" title="实现 FLink UDF 函数——更细粒度的控制流"></a>实现 FLink UDF 函数——更细粒度的控制流</h2><h3 id="1-函数类-Function-Classes"><a href="#1-函数类-Function-Classes" class="headerlink" title="1. 函数类(Function Classes)"></a>1. 函数类(Function Classes)</h3><h3 id="2-匿名函数-Lambda-Functions"><a href="#2-匿名函数-Lambda-Functions" class="headerlink" title="2. 匿名函数(Lambda Functions)"></a>2. 匿名函数(Lambda Functions)</h3><h3 id="3-富函数-Rich-Functions"><a href="#3-富函数-Rich-Functions" class="headerlink" title="3. 富函数(Rich Functions)"></a>3. 富函数(Rich Functions)</h3><p>富函数是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同就在于，可以获取运行环境的上下文，并拥有一些生命周期的方法，所以可以实现更复杂的功能；</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/Transform/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/18/Transform/" class="post-title-link" itemprop="url">Transform</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-18 14:46:59" itemprop="dateCreated datePublished" datetime="2022-12-18T14:46:59+08:00">2022-12-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-01-11 22:07:49" itemprop="dateModified" datetime="2023-01-11T22:07:49+08:00">2023-01-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p>
+<p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p>
+<p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
 </body>
+</html>

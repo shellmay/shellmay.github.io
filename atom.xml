@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-07T13:02:52.083Z</updated>
+  <updated>2023-01-12T14:53:06.913Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>lombok</title>
+    <link href="http://example.com/2023/01/11/lombok/"/>
+    <id>http://example.com/2023/01/11/lombok/</id>
+    <published>2023-01-11T14:05:55.000Z</published>
+    <updated>2023-01-12T14:53:06.913Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="如何使用Lombok"><a href="#如何使用Lombok" class="headerlink" title="如何使用Lombok"></a>如何使用Lombok</h3><p>在java中使用lombok消除Java的冗长，尤其是对于简单的Java对象(POJO), 它通过注释实现这一目的。</p><p>lombok使用注解简化了java中属性的setter和getter等方法；</p><h5 id="添加lombok依赖"><a href="#添加lombok依赖" class="headerlink" title="添加lombok依赖"></a>添加lombok依赖</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.16.16&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><h5 id="Lombok注解"><a href="#Lombok注解" class="headerlink" title="Lombok注解"></a>Lombok注解</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Data：注解在类上，将类提供的所有属性都添加get、set方法，并添加、equals</span><br></pre></td></tr></table></figure><p>普通的bean</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setId</span><span class="params">(String id)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(Integer age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><p>使用lombok</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Setter</span></span><br><span class="line"><span class="meta">@Getter</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">User</span>();</span><br><span class="line">    user.setId(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">    user.setName(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    user.setAge(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;如何使用Lombok&quot;&gt;&lt;a href=&quot;#如何使用Lombok&quot; class=&quot;headerlink&quot; title=&quot;如何使用Lombok&quot;&gt;&lt;/a&gt;如何使用Lombok&lt;/h3&gt;&lt;p&gt;在java中使用lombok消除Java的冗长，尤其是对于简单的Java对象</summary>
+      
+    
+    
+    
+    
+    <category term="lombok" scheme="http://example.com/tags/lombok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地项目添加到github</title>
+    <link href="http://example.com/2023/01/09/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E5%88%B0github/"/>
+    <id>http://example.com/2023/01/09/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E5%88%B0github/</id>
+    <published>2023-01-08T16:22:53.000Z</published>
+    <updated>2023-01-08T17:56:57.370Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="本篇要解决的问题是：如何把本地项目提交到git"><a href="#本篇要解决的问题是：如何把本地项目提交到git" class="headerlink" title="本篇要解决的问题是：如何把本地项目提交到git"></a>本篇要解决的问题是：如何把本地项目提交到git</h3><ol><li><p>首先，在github生成新的仓库；</p></li><li><p>赋值仓库链接；</p></li><li></li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;本篇要解决的问题是：如何把本地项目提交到git&quot;&gt;&lt;a href=&quot;#本篇要解决的问题是：如何把本地项目提交到git&quot; class=&quot;headerlink&quot; title=&quot;本篇要解决的问题是：如何把本地项目提交到git&quot;&gt;&lt;/a&gt;本篇要解决的问题是：如何把本地项目</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac</title>
+    <link href="http://example.com/2023/01/08/mac/"/>
+    <id>http://example.com/2023/01/08/mac/</id>
+    <published>2023-01-08T15:52:47.000Z</published>
+    <updated>2023-01-08T15:52:47.261Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mac-github</title>
+    <link href="http://example.com/2023/01/08/mac-github/"/>
+    <id>http://example.com/2023/01/08/mac-github/</id>
+    <published>2023-01-08T15:51:58.000Z</published>
+    <updated>2023-01-08T15:51:58.186Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>springboot-01</title>
@@ -44,7 +114,7 @@
     <link href="http://example.com/2022/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01/"/>
     <id>http://example.com/2022/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-01/</id>
     <published>2022-12-30T14:34:24.000Z</published>
-    <updated>2023-01-05T16:18:35.931Z</updated>
+    <updated>2023-01-11T14:07:45.245Z</updated>
     
     <content type="html"><![CDATA[<h4 id="数据结构-算法-x3D-解决问题"><a href="#数据结构-算法-x3D-解决问题" class="headerlink" title="数据结构+算法&#x3D;解决问题"></a>数据结构+算法&#x3D;解决问题</h4><h4 id="数据结构分为"><a href="#数据结构分为" class="headerlink" title="数据结构分为"></a>数据结构分为</h4><ol><li><p>线性结构</p><p>数组、队列、链表和栈；</p></li><li><p>非线性结构</p><p>二维数组、多维数组、广义表、树结构、图结构；</p></li></ol><h3 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h3><p>稀疏数组</p><p>如下：</p><table><thead><tr><th align="center">0</th><th align="center">0</th><th>0</th><th>0</th><th align="center">0</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">1</td><td>0</td><td>0</td><td align="center">0</td></tr><tr><td align="center">0</td><td align="center">0</td><td>2</td><td>0</td><td align="center">0</td></tr><tr><td align="center">0</td><td align="center">0</td><td>0</td><td>0</td><td align="center">0</td></tr></tbody></table><table><thead><tr><th></th><th>row</th><th>col</th><th>val</th></tr></thead><tbody><tr><td>0</td><td>4</td><td>5</td><td>2</td></tr><tr><td>1</td><td>1</td><td>2</td><td>1</td></tr><tr><td>2</td><td>2</td><td>2</td><td>2</td></tr></tbody></table><p>二维数组转稀疏数组的思路</p><ol><li><p>遍历原始的二维数组，得到有效数据的个数sum</p></li><li><p>根据sum就可以创建稀疏数组spareseArr int[sum+1][3]</p></li><li><p>将二维数组的有效数据存入稀疏数组</p></li></ol><p>稀疏数组转二维数组的思路</p><ol><li><p>先读取数组的第一行，根据第一行的数据，创建原属的二维数组，比如上面的chessArr2&#x3D;int[11][11]</p></li><li><p>在读取稀疏数组后几行的数据，并赋给原始的二维数组即可；</p></li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -133,9 +203,9 @@
     <link href="http://example.com/2022/12/18/Transform/"/>
     <id>http://example.com/2022/12/18/Transform/</id>
     <published>2022-12-18T06:46:59.000Z</published>
-    <updated>2022-12-18T08:14:19.442Z</updated>
+    <updated>2023-01-11T14:07:49.430Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p><p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p><p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Reduce"><a href="#Reduce" class="headerlink" title="Reduce"></a>Reduce</h3><p>一个分组数据留的聚合操作，合并当前元素的和上一次聚合的结果，产生一个新的值。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keyStream-&gt;DataStream</span></span><br></pre></td></tr></table></figure><h3 id="Split和Select"><a href="#Split和Select" class="headerlink" title="Split和Select"></a>Split和Select</h3><p>按照某种特征把DataSream拆分成两个或者多个DataStream。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//DataStream-&gt;SlpitStream</span></span><br></pre></td></tr></table></figure><h3 id="Connect-amp-CoMap"><a href="#Connect-amp-CoMap" class="headerlink" title="Connect&amp;CoMap"></a>Connect&amp;CoMap</h3><p>DataStream → ConnectedStreams,连接两个保持他们类型的数据流，两个数据流被Connect之后，只是被放在了一个同一个流中，内部亦然保持各自的数据和形式不变化，两个流相互独立；</p><p>ConnectedStreams → DataStream，作用于ConnectedStream，功能与 map 和 flatMap 一样，对 ConnectedStreams 中的每一个 Stream 分别进行 map 和 flatMap 处理。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>DataStream → DataStream: 对两个或者两个以上的DataStream进行union操</p><p>作，产生一个包含所有 DataStream 元素的新 DataStream。</p>]]></content>
     
     
       
@@ -372,48 +442,6 @@
     
     
     <category term="buff" scheme="http://example.com/tags/buff/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>testblog</title>
-    <link href="http://example.com/2022/12/03/testblog/"/>
-    <id>http://example.com/2022/12/03/testblog/</id>
-    <published>2022-12-02T19:00:13.000Z</published>
-    <updated>2022-12-15T15:20:54.655Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="大数据基础"><a href="#大数据基础" class="headerlink" title="大数据基础"></a>大数据基础</h2><h3 id="flume"><a href="#flume" class="headerlink" title="flume"></a>flume</h3><h3 id="kafka"><a href="#kafka" class="headerlink" title="kafka"></a>kafka</h3><h3 id="hadoop"><a href="#hadoop" class="headerlink" title="hadoop"></a>hadoop</h3><h3 id="hbase"><a href="#hbase" class="headerlink" title="hbase"></a>hbase</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><h2 id="flink"><a href="#flink" class="headerlink" title="flink"></a>flink</h2><ol><li><p>内置函数；</p></li><li><p>lambda表达式；</p></li><li><p>范型擦除；</p></li><li></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;大数据基础&quot;&gt;&lt;a href=&quot;#大数据基础&quot; class=&quot;headerlink&quot; title=&quot;大数据基础&quot;&gt;&lt;/a&gt;大数据基础&lt;/h2&gt;&lt;h3 id=&quot;flume&quot;&gt;&lt;a href=&quot;#flume&quot; class=&quot;headerlink&quot; title=&quot;flu</summary>
-      
-    
-    
-    
-    
-    <category term="随记" scheme="http://example.com/tags/%E9%9A%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2022/12/03/hello-world/"/>
-    <id>http://example.com/2022/12/03/hello-world/</id>
-    <published>2022-12-02T18:26:02.588Z</published>
-    <updated>2022-12-10T09:45:51.024Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
     
   </entry>
   

@@ -1,473 +1,1071 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>Hexo - </title>
-    
-      <link rel="icon" href="/img/favicon.ico">
-    
-    <meta name="keyword"  content="">
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-    
-      
-<link rel="stylesheet" href="/css/helpers.css">
-    
-    
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/page/2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo</title>
   
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
 
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-<body>
-  <div class="loading-wrapper" data-loading="true">
-    <div class="loading">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  <div class="page" data-filter="true">
-    <div class="head" data-show="true">
-      <header class="head-header">
-  <div class="head-author">
-    <a href="/" class="head-author-link">
-      Hexo</a>
-    </div>
-  <div class="head-right">
-    <!-- <div class="head-search">
-      <input class="head-searchK"></input>
-      <span class="head-searchT">
-        Search</span>
-    </div> -->
-    <button class="bar-wrap" id="bar-wrap-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <div class="head-about" id="head-about">
-      
-      <a class="head-about-link" href="/about">
-        关于</a>
-      
-    </div>
-  </div>
-</header>
-
-    </div>
-    <div class="main">
-      
-
-<div class="menu-bar-head" id="menu-bar" data-show="false">
-  <ul class="menu-bar-ul">
-    
-      
-      <li class="menu-bar-item ">
-          
-              <a href="/categories/Posts/">
-          
-              <span>Posts1</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item ">
-          
-              <a href="/categories/Posts2/">
-          
-              <span>Posts2</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item  border ">
-          
-            <a href="/archives">
-          
-              <span>Archives</span>
-            </a>
-      </li>
-    
-      
-      <li class="menu-bar-item ">
-          
-            <a href="/tags">
-          
-              <span>Tags</span>
-            </a>
-      </li>
-    
-    
-      <li class="menu-bar-item">
-        <a href="/about">
-          <span>关于</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-      <div class="menu-nav">
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-        <a href="/archives">
-      
-      <span>Archives</span></a>
-    </div>
-    <div class="menu-nav-item-cont archives">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul>
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-          <a href="/categories/Posts/">
-      
-      <span>Posts1</span></a>
-    </div>
-    <div class="menu-nav-item-cont posts">
-      
-      <p class="menu-nav-item empty">Empty~</p>
-
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-          <a href="/categories/Posts2/">
-      
-      <span>Posts2</span></a>
-    </div>
-    <div class="menu-nav-item-cont posts">
-      
-      <p class="menu-nav-item empty">Empty~</p>
-
-
-    </div>
-  </div>
-  
-  
-  <div class="menu-nav-item">
-    <div class="menu-nav-item-tit">
-      
-        <a href="/tags">
-      
-      <span>Tags</span></a>
-    </div>
-    <div class="menu-nav-item-cont tags">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buff/" rel="tag">buff</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flink/" rel="tag">flink</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flume/" rel="tag">flume</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/" rel="tag">springboot</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="tag">负载均衡</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a><span class="tag-list-count">1</span></li></ul>
-
-    </div>
-  </div>
-  
-</div>
-
-<div id="index-content" class="content">
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/11/git/">
-        如何本地代码上传github
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-11 23:58:24" datetime="2022-12-11T15:58:24.000Z" itemprop="datePublished">
-  2022-12-11</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
     </div>
   </div>
 
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/11/flink-WordCount/">
-        flink-WordCount
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-11 22:22:36" datetime="2022-12-11T14:22:36.000Z" itemprop="datePublished">
-  2022-12-11</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
+  <div class="site-meta">
 
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/10/flink/">
-        flink
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-10 17:47:00" datetime="2022-12-10T09:47:00.000Z" itemprop="datePublished">
-  2022-12-10</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flink/" rel="tag">flink</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/04/Load-Balance/">
-        Load Balance
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-04 01:00:34" datetime="2022-12-03T17:00:34.000Z" itemprop="datePublished">
-  2022-12-04</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="tag">负载均衡</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/04/flume-failover/">
-        flume-failover
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-04 00:13:41" datetime="2022-12-03T16:13:41.000Z" itemprop="datePublished">
-  2022-12-04</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flume/" rel="tag">flume</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/">
-        我们一起叠buff
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-03 03:11:43" datetime="2022-12-02T19:11:43.000Z" itemprop="datePublished">
-  2022-12-03</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/buff/" rel="tag">buff</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/03/testblog/">
-        testblog
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-03 03:00:13" datetime="2022-12-02T19:00:13.000Z" itemprop="datePublished">
-  2022-12-03</time>
-    </div>
-    <div class="post-item-tag">
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a></li></ul>
-
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-    <article class="post-item ">
-  <header class="post-item-head">
-    <h2 class="post-item-title ">
-      <a class="title" href="/2022/12/03/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  </header>
-  <div class="post-item-datetag ">
-    <div class="post-item-date">
-      <time class="post-time" title="2022-12-03 02:26:02" datetime="2022-12-02T18:26:02.588Z" itemprop="datePublished">
-  2022-12-03</time>
-    </div>
-    <div class="post-item-tag">
-      
-    </div>
-  </div>
-
-  <div class="article-entry " itemprop="articleBody">
-    
-  </div>
-</article>
-  
-
-  <div class="pagination">
-    
-  <div class="nav-link prev">
-    <i class="icon icon icon-chevron-left"></i>
-    <a href="/">
-      <span>Prev</span>
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
   </div>
 
-
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
   </div>
 </div>
-    </div>
-    <footer class="footer-nav">
-      <div class="footer">
-        <div class="back-top" id="back-top" title="Back to top">
-          <i class="icon icon-chevron-bar-up"></i>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
         </div>
-        <span class="footer-msg">
-  
-    <div class="icp">
-      <img src="/img/icp.png" alt="icp Record">
-      <a href="https://beian.miit.gov.cn/" class="icp-text" target="_blank">
-        京ICP备2021005293号
-      </a>
-    </div>
-  
+        <!--/noindex-->
 
-  
-
-  
-  
-
-    <div>
-      <span id="busuanzi_container_site_pv">
-        <span id="busuanzi_value_site_pv">?</span> PV
-      </span>
-      <span id="busuanzi_container_site_uv">
-        <span id="busuanzi_value_site_uv">?</span> UV
-      </span>
-    </div>
-
-  
-
-
-
-  Copyright &copy;
-  2020
-  
-  
-    <span class="timeDivide">-</span>
-    2023
-  
-  John Doe.
-  Power by
-  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
-  and
-  <a href="https://github.com/Cerallin/hexo-theme-yuzu"
-      target="_blank" rel="external nofollow" title="v2.4">
-    Theme Yuzu</a>.
-</span>
-
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
       </div>
-    </footer>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
     
 
 
-<script src="/js/clipboard/clipboard.min.js"></script>
-
-
-<script src="/js/theme.js"></script>
-
-
-<script src="/js/index.js"></script>
-
-
-
-  
-  <script>
-      expend = "Expand";
-      collapse = "Collapse";
-  </script>
+<div class="post-block">
   
   
-<script src="/js/toc.js"></script>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/14/flink%E6%B5%81%E5%A4%84%E7%90%86API/" class="post-title-link" itemprop="url">flink流处理API</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-14 21:14:09 / Modified: 22:48:32" itemprop="dateCreated datePublished" datetime="2022-12-14T21:14:09+08:00">2022-12-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Flink流处理API流程"><a href="#Flink流处理API流程" class="headerlink" title="Flink流处理API流程"></a>Flink流处理API流程</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-14-21-14-39-image.png"></p>
+<h3 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个执行环境，表示当前执行环境的上下文</span></span><br><span class="line"><span class="type">ExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> ExecutionEnvironment.getExecutionEnvironment();</span><br><span class="line"></span><br><span class="line"><span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> StreamExecutionEnvironment.getExecutionEnvironment();</span><br></pre></td></tr></table></figure>
+
+<h4 id="并行度设置"><a href="#并行度设置" class="headerlink" title="并行度设置"></a>并行度设置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//flink-conf.yaml中设置</span></span><br><span class="line"><span class="attr">parellesim.default:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="createLocalEnvironment"><a href="#createLocalEnvironment" class="headerlink" title="createLocalEnvironment"></a>createLocalEnvironment</h4><p>返回本地执行环境，需要在调用时指定默认的并行度。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">LocalStreamEnvironment</span> <span class="variable">env</span> <span class="operator">=</span> StreamExecutionEnvironment.createLocalEnvironment(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="createRemoteEnvironment"><a href="#createRemoteEnvironment" class="headerlink" title="createRemoteEnvironment"></a>createRemoteEnvironment</h4><p>返回集群执行环境，将 Jar 提交到远程服务器。需要在调用时指定 JobManager 的 IP 和端口号，并指定要在集群中运行的 Jar 包。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span>StreamExecutionEnvironment.createRemoteEnvironment(</span><br><span class="line"><span class="string">&quot;jobmanage-hostname&quot;</span>, <span class="number">6123</span>,<span class="string">&quot;YOURPATH//WordCount.jar&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="从集合读取数据"><a href="#从集合读取数据" class="headerlink" title="从集合读取数据"></a>从集合读取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SourceTest1_Collection</span> &#123;<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception&#123;<span class="type">StreamExecutionEnvironment</span> <span class="variable">env</span> <span class="operator">=</span>StreamExecutionEnvironment.getExecutionEnvironment();<span class="comment">// 1.Source:从集合读取数据</span>DataStream&lt;SensorReading&gt; sensorDataStream = env.fromCollection(Arrays.asList(<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_1&quot;</span>, <span class="number">1547718199L</span>, <span class="number">35.8</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_6&quot;</span>, <span class="number">1547718201L</span>, <span class="number">15.4</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_7&quot;</span>, <span class="number">1547718202L</span>, <span class="number">6.7</span>),<span class="keyword">new</span> <span class="title class_">SensorReading</span>(<span class="string">&quot;sensor_10&quot;</span>, <span class="number">1547718205L</span>, <span class="number">38.1</span>)));<span class="comment">// 2.打印</span>sensorDataStream.print();<span class="comment">// 3.执行</span>env.execute();&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="从文件读取数据"><a href="#从文件读取数据" class="headerlink" title="从文件读取数据"></a>从文件读取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataStream&lt;String&gt; dataStream = env.readTextFile(<span class="string">&quot;YOUR_FILE_PATH &quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="以-kafka-消息队列的数据作为来源"><a href="#以-kafka-消息队列的数据作为来源" class="headerlink" title="以 kafka 消息队列的数据作为来源"></a>以 kafka 消息队列的数据作为来源</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
 
 
+    
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/13/Flink%E8%BF%90%E8%A1%8C%E6%9E%B6%E6%9E%84/" class="post-title-link" itemprop="url">Flink运行架构</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-13 00:20:43 / Modified: 20:41:34" itemprop="dateCreated datePublished" datetime="2022-12-13T00:20:43+08:00">2022-12-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Flink运行时的组件"><a href="#Flink运行时的组件" class="headerlink" title="Flink运行时的组件"></a>Flink运行时的组件</h3><ol>
+<li><p>作业管理器（JobManager）</p>
+</li>
+<li><p>任务管理器（TaskManager）</p>
+</li>
+<li><p>资源管理器（ResourceManager）</p>
+</li>
+<li><p>分发器（Dispatcher）</p>
+</li>
+</ol>
+<h2 id="任务提交流程"><a href="#任务提交流程" class="headerlink" title="任务提交流程"></a>任务提交流程</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-13-20-31-40-image.png"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/12/flink-Yarn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/12/flink-Yarn/" class="post-title-link" itemprop="url">flink-Yarn</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-12 23:43:53" itemprop="dateCreated datePublished" datetime="2022-12-12T23:43:53+08:00">2022-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-13 00:05:08" itemprop="dateModified" datetime="2022-12-13T00:05:08+08:00">2022-12-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Flink-on-Yarn"><a href="#Flink-on-Yarn" class="headerlink" title="Flink on Yarn"></a>Flink on Yarn</h2><ul>
+<li>要求Flink是有Hadoop支持的版本，Hadoop环境需要2.2以上；</li>
+</ul>
+<h3 id="Session-cluster模式"><a href="#Session-cluster模式" class="headerlink" title="Session-cluster模式"></a>Session-cluster模式</h3><ul>
+<li><p>先启动集群，yarn会申请一块空间后，资源保持不变，如果资源满了，下一个作业酒无法提交，只能等到yarn中的其中一个作业执行完成后，释放了资源，下一个作业才会正常提交；</p>
+</li>
+<li><p>所有作业共享Dispacher和ResourceManager：共享资源；</p>
+</li>
+<li><p>适合规模小执行时间短的作业；</p>
+</li>
+</ul>
+<h3 id="Per-Job-Cluster模式"><a href="#Per-Job-Cluster模式" class="headerlink" title="Per-Job-Cluster模式"></a>Per-Job-Cluster模式</h3><ul>
+<li><p>一个Job对应一个集群，没提交一个作业会根据自身情况都会单独向yarn申请资源，直到作业完成，一个作业的成功与否并不会影响到下一个作业的提交和运行；</p>
+</li>
+<li><p>独享Dispacher和ResourceManager，按需申请资源；</p>
+</li>
+<li><p>适合大规模长时间运行的作业；</p>
+</li>
+</ul>
+<h2 id="Kubernetes部署"><a href="#Kubernetes部署" class="headerlink" title="Kubernetes部署"></a>Kubernetes部署</h2><ul>
+<li><p>在K8s上构建Flink Session Cluster，需要将集群的组件对应的docker镜像分别在k8s上启动，包括JobManager、TaskManager、JobManagerServer三个镜像服务；</p>
+</li>
+<li><p>启动Flink Session Cluster</p>
+</li>
+<li><p>访问FlinkUI页面</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/12/flink-standalone/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/12/flink-standalone/" class="post-title-link" itemprop="url">flink-standalone</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-12 23:42:46" itemprop="dateCreated datePublished" datetime="2022-12-12T23:42:46+08:00">2022-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-18 14:46:03" itemprop="dateModified" datetime="2022-12-18T14:46:03+08:00">2022-12-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="StandAlone"><a href="#StandAlone" class="headerlink" title="StandAlone"></a>StandAlone</h2><p>单机模式，没有集群模式</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/11/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/11/git/" class="post-title-link" itemprop="url">如何本地代码上传github</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-11 23:58:24" itemprop="dateCreated datePublished" datetime="2022-12-11T23:58:24+08:00">2022-12-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-14 21:13:22" itemprop="dateModified" datetime="2022-12-14T21:13:22+08:00">2022-12-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/11/flink-WordCount/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/11/flink-WordCount/" class="post-title-link" itemprop="url">flink-WordCount</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-11 22:22:36 / Modified: 23:55:32" itemprop="dateCreated datePublished" datetime="2022-12-11T22:22:36+08:00">2022-12-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="java实现flink简单上手项目"><a href="#java实现flink简单上手项目" class="headerlink" title="java实现flink简单上手项目"></a>java实现flink简单上手项目</h2><h3 id="批处理任务"><a href="#批处理任务" class="headerlink" title="批处理任务"></a>批处理任务</h3><h3 id="流处理任务"><a href="#流处理任务" class="headerlink" title="流处理任务"></a>流处理任务</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/10/flink/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/10/flink/" class="post-title-link" itemprop="url">flink</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-10 17:47:00" itemprop="dateCreated datePublished" datetime="2022-12-10T17:47:00+08:00">2022-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-11 22:21:11" itemprop="dateModified" datetime="2022-12-11T22:21:11+08:00">2022-12-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="flink本地部署单节点"><a href="#flink本地部署单节点" class="headerlink" title="flink本地部署单节点"></a>flink本地部署单节点</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="flink特点"><a href="#flink特点" class="headerlink" title="flink特点"></a>flink特点</h2><ul>
+<li><p>处理有界数据和无界数据</p>
+</li>
+<li><p>低延迟</p>
+</li>
+<li><p>高吞吐</p>
+</li>
+<li><p>结果的准确性和良好的容错性</p>
+</li>
+</ul>
+<h2 id="使用flink行业"><a href="#使用flink行业" class="headerlink" title="使用flink行业"></a>使用flink行业</h2><ul>
+<li><p>电商和市场营销</p>
+<p>数据报表、广告投放、业务流程需要；</p>
+</li>
+<li><p>物联网</p>
+<p>传感器实时数据采集和显示、实时报警、交通运输业；</p>
+</li>
+<li><p>电信业</p>
+<p>基站流量调配；</p>
+</li>
+<li><p>银行和金融业</p>
+<p>实时结算和通知推送，实时检测异常行为；</p>
+</li>
+</ul>
+<h2 id="传统数据处理架构"><a href="#传统数据处理架构" class="headerlink" title="传统数据处理架构"></a>传统数据处理架构</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-28-37-image.png"></p>
+<h2 id="有状态的流式处理"><a href="#有状态的流式处理" class="headerlink" title="有状态的流式处理"></a>有状态的流式处理</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-32-24-image.png"></p>
+<h2 id="流处理的演变"><a href="#流处理的演变" class="headerlink" title="流处理的演变"></a>流处理的演变</h2><ul>
+<li><p>lambda演变（流批一体）</p>
+<ol>
+<li><p>用两套系统，同事保持低延迟和结果准确</p>
+</li>
+<li><p>保存着流处理和批处理的架构</p>
+</li>
+<li><p>先攒一批再处理</p>
+</li>
+<li><p>痛处：维护不同的系统时当架构发生变化，维护、开发成本变大，因为需要同时改变两套框架的处理方式，如：API用法；</p>
+</li>
+</ol>
+<p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-10-18-44-37-image.png"></p>
+</li>
+</ul>
+<h2 id="Flink的主要特点"><a href="#Flink的主要特点" class="headerlink" title="Flink的主要特点"></a>Flink的主要特点</h2><p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-01-20-image.png"></p>
+<h2 id="分层API"><a href="#分层API" class="headerlink" title="分层API"></a>分层API</h2><ul>
+<li><p>越顶层越抽象，表达含义越简明，使用越方便</p>
+</li>
+<li><p>越底层越具体，表达能力越丰富，使用越灵活</p>
+</li>
+</ul>
+<p><img src="/Users/xiaomeichen/Library/Application%20Support/marktext/images/2022-12-11-13-06-30-image.png"></p>
+<h2 id="Flink其他特点"><a href="#Flink其他特点" class="headerlink" title="Flink其他特点"></a>Flink其他特点</h2><ul>
+<li><p>支持时间时间和处理时间语义；</p>
+</li>
+<li><p>精确一次的状态一致性保证；</p>
+</li>
+<li><p>低延迟，每秒处理数百万个事件，毫秒级延迟；</p>
+</li>
+<li><p>与众多常用存储系统的连接；</p>
+</li>
+<li><p>高可用，动态扩展，实现7*24小时全天候运行；</p>
+</li>
+</ul>
+<p>Flink vs Spark Stearming</p>
+<ul>
+<li><p>流和微批</p>
+<ul>
+<li><p>spark的微批把攒批的时间定的很小，达到秒级处理，但是结构还是批处理；</p>
+</li>
+<li><p>Flink就是流数据处理的架构过程；</p>
+</li>
+</ul>
+</li>
+<li><p>数据模型</p>
+<ul>
+<li><p>Spark采用RDD模型，spark streaming的DStrean实际上也就是一组组小批数据RDD的集合；</p>
+</li>
+<li><p>Flink基本数据模型是数据流，以及事件序列；</p>
+</li>
+</ul>
+</li>
+<li><p>运行时架构</p>
+<ul>
+<li><p>spark是批计算，将DAG划分为不同的stage，一个完成后才可以计算下一个；</p>
+</li>
+<li><p>flink是标砖的流执行模式，一个事件在一个节点处理完成后可以直接发往下一个节点进行处理；</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/04/Load-Balance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/04/Load-Balance/" class="post-title-link" itemprop="url">Load Balance</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-04 01:00:34 / Modified: 01:24:47" itemprop="dateCreated datePublished" datetime="2022-12-04T01:00:34+08:00">2022-12-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="什么是负载均衡"><a href="#什么是负载均衡" class="headerlink" title="什么是负载均衡"></a>什么是负载均衡</h3><p>负载均衡就是一种机制，一个算法，用于解决分担一个机器无法完成而分到等多个机器上一起解决的问题。</p>
+<h3 id="flume和负载均衡的产生背景"><a href="#flume和负载均衡的产生背景" class="headerlink" title="flume和负载均衡的产生背景"></a>flume和负载均衡的产生背景</h3><p>从数据源到中间多台flume再到数据存储的过程中，当两个以上flume串联的使用时，会因为两个flume机器能力不一样而产生问题。比如一个机器每秒处理100个event而一个机器每秒处理10个event，这两配合一起工作时间长了，会形成数据堵塞的问题。</p>
+<p>一个agent解决不了的问题，可以多个agent解决问题，这就是flume中遇到的负载均衡的产生背景；</p>
+<h3 id="flume负载均衡算法"><a href="#flume负载均衡算法" class="headerlink" title="flume负载均衡算法"></a>flume负载均衡算法</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/04/flume-failover/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/04/flume-failover/" class="post-title-link" itemprop="url">flume-failover</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-04 00:13:41 / Modified: 00:29:54" itemprop="dateCreated datePublished" datetime="2022-12-04T00:13:41+08:00">2022-12-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="failover和负载均衡"><a href="#failover和负载均衡" class="headerlink" title="failover和负载均衡"></a>failover和负载均衡</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/12/03/%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%8F%A0buff/" class="post-title-link" itemprop="url">我们一起叠buff</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-12-03 03:11:43" itemprop="dateCreated datePublished" datetime="2022-12-03T03:11:43+08:00">2022-12-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-12-09 13:46:19" itemprop="dateModified" datetime="2022-12-09T13:46:19+08:00">2022-12-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="我们是谁？"><a href="#我们是谁？" class="headerlink" title="我们是谁？"></a>我们是谁？</h2><p>我们就是我们想做开发、学习大数据开发的人，因为我坚信，肯定有哪些和我志同道合的人一起，想做开发，想从别的岗位转开发，而我要做的是 大数据开发、大数据平台开发；</p>
+<h2 id="为什么说是叠buff"><a href="#为什么说是叠buff" class="headerlink" title="为什么说是叠buff"></a>为什么说是叠buff</h2><p>因为今天突发奇想，觉得人生道路上，如果把工作当成是叠buff，那人生就有趣多了。其实真正有趣的不是完成的过程，是完成后达到的标准是什么，我们的人生就像是打游戏一样，过关、斩将，一关一关的过。就如同现在我们的人生一样，过关斩将也是常有的事情。</p>
+<h4 id="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"><a href="#最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗" class="headerlink" title="最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗"></a>最后，珍惜每一次学习的机会，珍惜每一天，拒绝内耗</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="Previous page" aria-label="Previous page" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
 </body>
+</html>
