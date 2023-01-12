@@ -113,7 +113,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -135,6 +135,110 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/13/java-%E5%BA%8F%E5%88%97%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/13/java-%E5%BA%8F%E5%88%97%E5%8C%96/" class="post-title-link" itemprop="url">java 序列化</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-01-13 00:49:29 / Modified: 01:16:25" itemprop="dateCreated datePublished" datetime="2023-01-13T00:49:29+08:00">2023-01-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Java序列化"><a href="#Java序列化" class="headerlink" title="Java序列化"></a>Java序列化</h3><ol>
+<li><p>Java序列化是指把Java对象转换为字节序列的过程，而java反系列化是指把自己饿序列恢复为Java对象的过程；</p>
+</li>
+<li><p>序列化主要用处是就是在传递和保存对象的时候，保证对象的保证行和可传递性；序列化是把对象转换有序字节流，以便在网络上传输或者保存在本地文件中。核心作用是对象状态的保存与重建；</p>
+</li>
+<li><p>反序列化：客户端从文件中或者网络上获得序列化后的对象字节流，根据字节流中所保存的对象状态及描述信息，通过返序列化重建对象；</p>
+</li>
+</ol>
+<h4 id="为什么要序列化和反序列化？"><a href="#为什么要序列化和反序列化？" class="headerlink" title="为什么要序列化和反序列化？"></a>为什么要序列化和反序列化？</h4><p>为什么要序列化？</p>
+<ol>
+<li>对象序列化可以实现分布式对象；</li>
+</ol>
+<p>   主要应用例如：RMI要利用对象序列化运行远程主机上的服务，就像本地机上运行对象时一样；</p>
+<ol start="2">
+<li><p>java对象序列化不仅仅保留对象的数据，而且递归保存对象引用的每个对象的数据；</p>
+</li>
+<li><p>序列化可以将内存中的类写入文件或数据库中；</p>
+</li>
+<li><p>对象、文件、数据，有许多不同的格式，很难统一传输和保存；</p>
+</li>
+</ol>
+<h4 id="如何实现Java序列化与反序列化"><a href="#如何实现Java序列化与反序列化" class="headerlink" title="如何实现Java序列化与反序列化"></a>如何实现Java序列化与反序列化</h4><p>首先我们要把准备要序列化类，实现 Serializabel接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Person</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123; <span class="comment">//本类可以序列化</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;姓名：&quot;</span> + <span class="built_in">this</span>.name + <span class="string">&quot;，年龄&quot;</span> + <span class="built_in">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们将name和age序列化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.lxh.SerDemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectOutputStream;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ObjectOutputStreamDemo</span> &#123; <span class="comment">//序列化</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">//序列化后生成指定文件路径</span></span><br><span class="line">        <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;D:&quot;</span> + File.separator + <span class="string">&quot;person.ser&quot;</span>);</span><br><span class="line">        <span class="type">ObjectOutputStream</span> <span class="variable">oos</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="comment">//装饰流（流）</span></span><br><span class="line">        oos = <span class="keyword">new</span> <span class="title class_">ObjectOutputStream</span>(<span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(file));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//实例化类</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">per</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;张三&quot;</span>, <span class="number">30</span>);</span><br><span class="line">        oos.writeObject(per); <span class="comment">//把类对象序列化</span></span><br><span class="line">        oos.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="serialVersion概述说明"><a href="#serialVersion概述说明" class="headerlink" title="serialVersion概述说明"></a>serialVersion概述说明</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">long</span> <span class="variable">serialVersionUID</span> <span class="operator">=</span> <span class="number">1L</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>serialVersionUID作用：相当于java类的身份证。主要用于版本控制。serialVersionUID作用是序列化时保持版本的兼容性，既在版本升级时反序列化仍保持对象的唯一性；</p>
+<h4 id="有两种生成方式"><a href="#有两种生成方式" class="headerlink" title="有两种生成方式"></a>有两种生成方式</h4><p>默认的1L</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">long</span> <span class="variable">serialVersionUID</span> <span class="operator">=</span> <span class="number">1L</span>;</span><br></pre></td></tr></table></figure>
+
+<p>根据类名、接口名、成员方法及属性等来生成一个64位的哈希字段：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">long</span> <span class="variable">serialVersionUID</span> <span class="operator">=</span> xxxxL;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -971,78 +1075,6 @@
 <h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主函数中调用</span></span><br><span class="line"><span class="type">FlinkJedisPoolConfig</span> <span class="variable">config</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FlinkJedisPoolConfig</span>.Builder()</span><br><span class="line">.setHost(<span class="string">&quot;localhost&quot;</span>)</span><br><span class="line">.setPort(<span class="number">6379</span>)</span><br><span class="line">.build();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h3>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hexo">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/18/flink%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">flink数据类型</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-12-18 16:58:56 / Modified: 21:50:47" itemprop="dateCreated datePublished" datetime="2022-12-18T16:58:56+08:00">2022-12-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="1-基础数据类型"><a href="#1-基础数据类型" class="headerlink" title="1. 基础数据类型"></a>1. 基础数据类型</h3><p>Flink 支持所有的 Java 和 Scala 基础数据类型，Int, Double, Long, String, …；</p>
-<h3 id="2-Java和Scala元组（Tuple）"><a href="#2-Java和Scala元组（Tuple）" class="headerlink" title="2. Java和Scala元组（Tuple）"></a>2. Java和Scala元组（Tuple）</h3><h3 id="3-Scala样例类（case-classes）"><a href="#3-Scala样例类（case-classes）" class="headerlink" title="3. Scala样例类（case classes）"></a>3. Scala样例类（case classes）</h3><h3 id="4-Java-简单对象-POJOs"><a href="#4-Java-简单对象-POJOs" class="headerlink" title="4. Java 简单对象(POJOs)"></a>4. Java 简单对象(POJOs)</h3><h3 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h3><p>Arrays, Lists, Maps, Enums, 等等；</p>
-<h2 id="实现-FLink-UDF-函数——更细粒度的控制流"><a href="#实现-FLink-UDF-函数——更细粒度的控制流" class="headerlink" title="实现 FLink UDF 函数——更细粒度的控制流"></a>实现 FLink UDF 函数——更细粒度的控制流</h2><h3 id="1-函数类-Function-Classes"><a href="#1-函数类-Function-Classes" class="headerlink" title="1. 函数类(Function Classes)"></a>1. 函数类(Function Classes)</h3><h3 id="2-匿名函数-Lambda-Functions"><a href="#2-匿名函数-Lambda-Functions" class="headerlink" title="2. 匿名函数(Lambda Functions)"></a>2. 匿名函数(Lambda Functions)</h3><h3 id="3-富函数-Rich-Functions"><a href="#3-富函数-Rich-Functions" class="headerlink" title="3. 富函数(Rich Functions)"></a>3. 富函数(Rich Functions)</h3><p>富函数是DataStream API提供的一个函数类的接口，所有Flink函数类都有其Rich版本。它与常规函数的不同就在于，可以获取运行环境的上下文，并拥有一些生命周期的方法，所以可以实现更复杂的功能；</p>
-
       
     </div>
 
